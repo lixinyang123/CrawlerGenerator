@@ -1,0 +1,35 @@
+{
+  "name": "generator",
+  "version": "1.0.0",
+  "description": "CrawlerGenerator",
+  "main": "src/main.js",
+  "scripts": {
+    "start": "electron .",
+    "package": "electron-builder"
+  },
+  "author": "lllxy",
+  "license": "ISC",
+  "dependencies": {
+    "cross-zip": "^3.0.0"
+  },
+  "devDependencies": {
+    "electron": "^8.0.0",
+    "electron-builder": "^22.3.2"
+  },
+  "build": {
+    "appId": "com.lllxy.crawlergenerator",
+    "copyright": "LLLXY",
+    "productName": "CrawlerGenerator",
+    "dmg": {
+      "window": {
+        "x": 100,
+        "y": 100,
+        "width": 500,
+        "height": 300
+      }
+    },
+    "win": {
+      "icon": "assets/icon.png"
+    }
+  }
+}

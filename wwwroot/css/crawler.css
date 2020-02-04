@@ -1,0 +1,22 @@
+body{
+    margin-bottom: 30px;
+    padding: 30px;
+}
+
+#mainDiv{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+input[type="number"]{
+    -moz-appearance: textfield;
+}
+
+tr{
+    cursor: pointer;
+}

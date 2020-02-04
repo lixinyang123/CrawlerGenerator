@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="../css/crawler.css"/>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"></script>
+    <script src="../js/crawler.js"></script>
+</head>
+<body>
+    
+    <div class="container">
+        <h1>Automate Processes</h1>
+        <div class="row">
+            <button id="btn_cycle" type="button" class="btn btn-info" onclick="checkCycle()" data-toggle="modal">Add Cycle</button>
+            <div class="modal fade inputCycle" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+                <div class="modal-dialog modal-sm" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                        <h4 class="modal-title" id="myLargeModalLabel">Cycle Times</h4>
+                        </div>
+                        <div class="modal-body">
+                            <div class="input-group">
+                                <input id="cycleTimes" type="number" class="form-control" placeholder="number">
+                                <span class="input-group-btn">
+                                    <button type="button" class="btn btn-info" onclick="addCycle()">OK</button>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal fade emptySelect" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+                <div class="modal-dialog modal-sm" role="document">
+                    <div class="modal-content">
+                        <div class="modal-body">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                            <h4>Empty Select</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <a type="button" class="btn btn-primary" href="/view/detail.html">Full Script</a>
+            <a type="button" class="btn btn-danger" href="/crawler/reset">Reset Script</a>
+        </div>
+
+        <div id="mainDiv" class="row">
+            <table class="table">
+                <tbody id="content"></tbody>
+            </table>
+        </div>
+
+        <div class="row">
+            <button type="button" class="btn btn-success" onclick="exportScript()">Export Script</button>
+        </div>
+    </div>
+
+    <script>init();</script>
+</body>
+</html>
