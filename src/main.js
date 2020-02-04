@@ -54,7 +54,7 @@ function initApp(){
   app.on('ready', async()=>{
     
     script = "";
-    script += fs.readFileSync("/scripts/selector.js").toString();
+    script += fs.readFileSync("./scripts/selector.js").toString();
     script += fs.readFileSync("./scripts/codeSnip.js").toString();
     script += fs.readFileSync("./scripts/generator.js").toString();
     script += fs.readFileSync("./scripts/inspector.js").toString();
