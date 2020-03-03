@@ -41,7 +41,7 @@ var codeSnip = {
     `,
     goto : `
         await page.goto('@parameter');
-        await page.waitFor(7000);
+        await page.waitFor(5000);
     `,
     getText : `
         var str = await page.$eval("@parameter",ele=>ele.innerText);
@@ -49,7 +49,7 @@ var codeSnip = {
     `,
     click : `
         await page.click('@parameter');
-        await page.waitFor(7000);
+        await page.waitFor(5000);
         var pages = await browser.pages();
         page = pages[pages.length-1];
     `,
