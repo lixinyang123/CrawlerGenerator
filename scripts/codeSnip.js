@@ -62,5 +62,8 @@ var codeSnip = {
     `,
     screenshot : `
         await (await page.$("@parameter")).screenshot({path: config.imgDir+guid()+".jpg"});
+    `,
+    typeText : `
+        await page.type('@parameter', '@text');
     `
 };

@@ -86,6 +86,12 @@ module.exports.getmenuTemplate = (win,shell)=>{
                     }
                 },
                 {
+                    label: "输入文本",
+                    click: ()=>{
+                        win.webContents.executeJavaScript("typeText()");
+                    }
+                },
+                {
                     label: "下载图片",
                     click: ()=>{
                         win.webContents.executeJavaScript("downloadImg()");

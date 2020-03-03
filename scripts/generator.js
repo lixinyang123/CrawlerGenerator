@@ -34,10 +34,24 @@ function click(){
     });
 }
 
+function typeText(){
+    initEvent(()=>{
+        var selector = selectElementWithQuerySelector();
+        if(checkTag(selector,"input")){
+            var value = document.querySelector(selector).value;
+            script.push(codeSnip.typeText.replace("@parameter",selector).replace("@text",value));
+            alert("选取成功");
+        }
+        else{
+            alert("此元素不是图片,请尝试使用元素截图");
+        }
+    });
+}
+
 function downloadImg(){
     initEvent(()=>{
         var selector = selectElementWithQuerySelector();
-        if(checkImage(selector)){
+        if(checkTag(selector,"img")){
             script.push(codeSnip.downloadImg.replace("@parameter",selector));
             alert("选取成功");
         }

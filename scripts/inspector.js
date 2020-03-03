@@ -22,11 +22,11 @@ function checkText(selector){
     return false;
 }
 
-function checkImage(selector){
+function checkTag(selector,tagName){
     
     if(checkSelector(selector)){
         var tagName = document.querySelector(selector).tagName.toLowerCase();
-        if(tagName=="img"){
+        if(tagName==tagName){
             return true;
         }
     }
