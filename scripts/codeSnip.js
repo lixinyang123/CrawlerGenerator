@@ -1,6 +1,6 @@
 var codeSnip = {
     crawler : `
-        const puppeteer = require('puppeteer');
+        const puppeteer = require('puppeteer-core');
         const fs = require("fs");
         const request = require("request");
         
@@ -24,8 +24,8 @@ var codeSnip = {
         init();
 
         (async()=>{
-            const browser = await puppeteer.launch({
-                headless:false,
+            const browser = await puppeteer.connect({ 
+                browserWSEndpoint: 'http://180.76.232.34:8080/' ,
                 defaultViewport:{
                     width:1920,
                     height:1080
