@@ -28,8 +28,11 @@ function createWindow () {
   });
 
   //dom加载完成注入选取器脚本（未初始化）
+  //非localhost注入脚本
   win.webContents.on('dom-ready',()=>{
-    win.webContents.executeJavaScript(script);
+    if(!win.webContents.getURL().includes("localhost")){
+      win.webContents.executeJavaScript(script);
+    }
   });
 
   win.webContents.on("will-navigate",()=>{
