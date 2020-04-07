@@ -1,7 +1,12 @@
 function openurl() {
     var url = document.getElementById("url").value;
-    if(url != "") {
-        window.location = "https://"+url;
+    if(url != "" || url!=undefined) {
+        if(url.startsWith("http")){
+            window.location.href = url;
+        }
+        else{
+            window.location = "http://"+url;
+        }
     }
 }
 function search() {
