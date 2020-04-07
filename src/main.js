@@ -17,7 +17,7 @@ function createWindow () {
 
   initMenu();
   scriptManager.init(win);
-  win.loadURL('https://cn.bing.com/');
+  win.loadURL('http://localhost:8435/view/index.html');
 
   //win.webContents.openDevTools();
 
