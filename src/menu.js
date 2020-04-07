@@ -10,7 +10,7 @@ module.exports.getmenuTemplate = (win,shell)=>{
                     label: "主页",
                     click: ()=>{
                         scriptManager.saveScript();
-                        win.webContents.loadURL('https://cn.bing.com/');
+                        win.webContents.loadURL('http://localhost:8435/view/index.html');
                     }
                 },
                 {
