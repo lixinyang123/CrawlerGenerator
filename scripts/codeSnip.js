@@ -1,6 +1,6 @@
 var codeSnip = {
     crawler : `
-        const puppeteer = require('puppeteer-core');
+        const puppeteer = require("puppeteer-core");
         const fs = require("fs");
         const request = require("request");
         
@@ -17,8 +17,8 @@ var codeSnip = {
         }
         
         function guid() {
-            return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g,function(c) {
-                var r = Math.random()*16|0, v = c == 'x' ? r : (r&0x3|0x8);
+            return "xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".replace(/[xy]/g,function(c) {
+                var r = Math.random()*16|0, v = c == "x" ? r : (r&0x3|0x8);
                 return v.toString(16);
             });
         }
@@ -27,7 +27,7 @@ var codeSnip = {
 
         (async()=>{
             const browser = await puppeteer.connect({ 
-                browserWSEndpoint: 'http://180.76.232.34:8080/' ,
+                browserWSEndpoint: "http://180.76.232.34:8080/" ,
                 defaultViewport:{
                     width:1920,
                     height:1080
@@ -42,7 +42,7 @@ var codeSnip = {
         })();
     `,
     goto : `
-        await page.goto('@parameter');
+        await page.goto("@parameter");
         await page.waitFor(5000);
     `,
     getText : `
@@ -50,7 +50,7 @@ var codeSnip = {
         fs.appendFileSync(config.textData,str+String.fromCharCode(10));
     `,
     click : `
-        await page.click('@parameter');
+        await page.click("@parameter");
         await page.waitFor(5000);
         var pages = await browser.pages();
         page = pages[pages.length-1];
@@ -66,6 +66,6 @@ var codeSnip = {
         await (await page.$("@parameter")).screenshot({path: config.imgDir+guid()+".jpg"});
     `,
     typeText : `
-        await page.type('@parameter', '@text');
+        await page.type("@parameter", "@text");
     `
 };
