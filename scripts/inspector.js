@@ -1,3 +1,10 @@
+function checkHref(href){
+    if(href.includes("localhost")){
+        return false;
+    }
+    return true;
+}
+
 function checkSelector(selector){
     try {
         var ele = document.querySelector(selector);

@@ -76,7 +76,7 @@ async function exportScript(){
     rootPath = checkSavePath(rootPath);
     fs.mkdirSync(rootPath);
     
-    fs.writeFileSync(rootPath + "\\MyCrawler.js",fullScript);
+    fs.writeFileSync(rootPath + "\\main.js",fullScript);
     require('cross-zip').unzip("./assets/assets.zip",rootPath,()=>{ 
         dialog.showMessageBoxSync(win,{
             type: "info",

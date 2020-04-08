@@ -3,8 +3,13 @@ var script = new Array();
 function start(){
     removeEvent();
     var parameter = window.location.href;
-    if(confirm("跳转到 "+parameter+" 吗?")){
-        script.push(codeSnip.goto.replace("@parameter",parameter));
+    if(checkHref(parameter)){
+        if(confirm("跳转到 "+parameter+" 吗?")){
+            script.push(codeSnip.goto.replace("@parameter",parameter));
+        }
+    }
+    else{
+        alert("跳转链接不合法");
     }
 }
 

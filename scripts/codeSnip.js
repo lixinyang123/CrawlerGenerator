@@ -10,8 +10,10 @@ var codeSnip = {
         };
         
         function init(){
-            fs.mkdirSync("./Data");
-            fs.mkdirSync(config.imgDir);
+            try {
+                fs.mkdirSync("./Data");
+                fs.mkdirSync(config.imgDir);
+            } catch (error) {}
         }
         
         function guid() {
