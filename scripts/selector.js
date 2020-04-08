@@ -58,7 +58,8 @@ function selectElementWithQuerySelector(){
     
     while(element.parentElement!=undefined){
         if(element.id!=""){
-            array.push("#"+element.id);
+            // array.push("#"+element.id);
+            array.push("[id='"+element.id+"']");
             break;
         }
         else{
