@@ -30,6 +30,16 @@
     },
     "win": {
       "icon": "assets/icon.png"
-    }
+    },
+    "extraResources": [
+      {
+        "from": "./assets",
+        "to": "../assets"
+      },
+      {
+        "from": "./scripts",
+        "to": "../scripts"
+      }
+    ]
   }
 }
