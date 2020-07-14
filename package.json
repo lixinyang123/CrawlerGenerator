@@ -29,7 +29,7 @@
       }
     },
     "win": {
-      "icon": "assets/icon.png"
+      "icon": "assets/icon.ico"
     },
     "extraResources": [
       {
