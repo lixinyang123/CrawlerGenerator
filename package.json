@@ -10,7 +10,7 @@
   "author": "lllxy",
   "license": "ISC",
   "dependencies": {
-    "cross-zip": "^3.0.0"
+    "cross-zip": "^3.0.0",
     "yargs-parser": ">=18.1.2"
   },
   "devDependencies": {
