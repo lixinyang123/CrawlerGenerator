@@ -1,7 +1,3 @@
-# CrawlerGenerator
-
-自动生成puppyteer爬虫脚本
-
 ## jsdom
 
 因为我不喜欢Python（现在感觉Python还挺香的😂），而且js操作dom效率应该更高一点吧。。。。毕竟爬自己人。。。所以我最开始选择用nodejs来写爬虫，有一个包叫 [jsdom](https://github.com/jsdom/jsdom "jsdom") 挺好用的。请求网页，然后丢jsdom里面就可以使用它来获取网页上的元素。
@@ -69,8 +65,6 @@ Puppeteer 初始化的屏幕大小默认为 800px * 600px。但是这个尺寸�
 
 先看[选择器部分](https://zhaoqize.github.io/puppeteer-api-zh_CN/#?product=Puppeteer&version=v3.0.2&show=api-pageselector "选择器部分")
 
-![](https://lllxy.oss-cn-shenzhen.aliyuncs.com/CoreHome/Blogs/批注 2020-05-06 225320.jpg)
-
 -  **page.$(selector)**
 此方法在页面内执行 document.querySelector。如果没有元素匹配指定选择器，返回值是 null。
 
@@ -96,7 +90,7 @@ document.onmouseover = () => {
 
 随便打开个网页晃晃鼠标试试。。。
 
-![](https://corehome.oss-cn-shenzhen.aliyuncs.com/blogs/批注 2020-05-07 193017.jpg)
+![](https://corehome.oss-cn-shenzhen.aliyuncs.com/blogs/%E6%89%B9%E6%B3%A8%202020-05-07%20193017.jpg)
 
 这样肯定不行，所以要加上鼠标移出元素清除边框
 
