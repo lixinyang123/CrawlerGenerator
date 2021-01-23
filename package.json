@@ -11,11 +11,8 @@
   "license": "ISC",
   "dependencies": {
     "cross-zip": "^3.0.0",
-    "yargs-parser": ">=18.1.2"
-  },
-  "devDependencies": {
-    "electron": "^8.5.2",
-    "electron-builder": "^22.3.2"
+    "yargs-parser": ">=18.1.2",
+    "electron": "^11.2.1"
   },
   "build": {
     "appId": "com.lllxy.crawlergenerator",

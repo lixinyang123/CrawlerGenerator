@@ -17,7 +17,8 @@ function createWindow () {
 
   initMenu();
   scriptManager.init(win);
-  win.loadURL('http://localhost:8435/view/index.html');
+  //win.loadURL('http://localhost:8435/view/index.html');
+  win.loadURL('https://www.conchbrain.club/#proxyservice');
 
   //win.webContents.openDevTools();
 
