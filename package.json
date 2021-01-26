@@ -10,9 +10,14 @@
   "author": "lllxy",
   "license": "ISC",
   "dependencies": {
+    "bootstrap": "^4.6.0",
     "cross-zip": "^3.0.0",
-    "yargs-parser": ">=18.1.2",
-    "electron": "^11.2.1"
+    "electron": "^11.2.1",
+    "jquery": "^3.5.1",
+    "yargs-parser": ">=18.1.2"
+  },
+  "devDependencies": {
+    "electron-builder": "^22.9.1"
   },
   "build": {
     "appId": "com.lllxy.crawlergenerator",
