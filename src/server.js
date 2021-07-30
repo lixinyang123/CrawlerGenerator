@@ -1,7 +1,7 @@
 const http = require("http");
 const url = require("url");
 const fs = require("fs");
-const rotate = require("./rotate");
+const router = require("./router");
 
 var server = http.createServer((req,res)=>{
     
@@ -16,7 +16,7 @@ var server = http.createServer((req,res)=>{
     //处理请求
     fs.readFile(realPath,(err,data)=>{
         if(err){
-            rotate(req,res);
+            router(req,res);
         }
         else{
             res.end(data);
